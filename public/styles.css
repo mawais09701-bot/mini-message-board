@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f4f5f7;
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: min(700px, 90%);
+  margin: 0 auto;
+  padding: 60px 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.page-header h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.page-header p {
+  margin: 0;
+  color: #666;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.message-card {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 6%);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.message-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #4f46e5;
+  color: #fff;
+  font-weight: bold;
+}
+
+.message-card h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.message-card time {
+  display: block;
+  margin-top: 3px;
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.message-text {
+  margin: 18px 0 0;
+  color: #444;
+  line-height: 1.6;
+}
+
+.message-card:hover {
+  transform: translateY(-4px);
+  border-color: #c7c7c7;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 10%);
+  cursor: pointer;
+}
+
+.add-btn {
+  padding: 10px 20px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 40px 0;
+  }
+
+  .page-header h1 {
+    font-size: 1.7rem;
+  }
+}

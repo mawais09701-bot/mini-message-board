@@ -1,0 +1,24 @@
+{
+  "name": "mini-message-board",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mawais09701-bot/mini-message-board.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mawais09701-bot/mini-message-board/issues"
+  },
+  "homepage": "https://github.com/mawais09701-bot/mini-message-board#readme",
+  "dependencies": {
+    "dotenv": "^18.0.5",
+    "ejs": "^6.0.1",
+    "express": "^5.2.1"
+  }
+}

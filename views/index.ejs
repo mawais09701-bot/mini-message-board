@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= title %>
+  </title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  <main class="container">
+    <header class="page-header">
+      <h1>Message Board</h1>
+      <p>Messages from the community</p>
+    </header>
+
+    <section class="messages">
+      <% messages.forEach((message)=> { %>
+        <article class="message-card">
+          <div class="message-top">
+            <div class="avatar">
+              <%= message.user.charAt(0).toUpperCase() %>
+            </div>
+
+            <div>
+              <h2>
+                <%= message.user %>
+              </h2>
+
+              <time datetime="<%= message.added.toISOString() %>">
+                <%= message.added.toLocaleString() %>
+              </time>
+            </div>
+          </div>
+
+          <p class="message-text">
+            <%= message.text %>
+          </p>
+        </article>
+        <% }) %>
+    </section>
+
+    <button class="add-btn"><a href="/new">Add Message</a></button>
+  </main>
+</body>
+
+</html>
